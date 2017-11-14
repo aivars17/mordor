@@ -5,11 +5,11 @@ define("VERSION", 2017111216);
 define("CONFIG", [
 
     // Application
-    "site_path" => "uFrame",
+    "site_path" => "studijos/mordor",
     "site_title" => "µFrame",
 
     // Database
-    "use_database" => false,
+    "use_database" => true,
 
     "db_hostname" => "localhost",
     "db_username" => "root",

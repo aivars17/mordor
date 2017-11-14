@@ -5,7 +5,7 @@ namespace uFrame;
 class App
 {
 
-    protected $controller = "Home";
+    protected $controller = "Page";
     protected $method = "index";
     protected $args = [];
     protected $db;
