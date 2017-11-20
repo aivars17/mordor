@@ -23,5 +23,27 @@ class Blog extends Controller
        
          $this->view("blog/single", $data);
     }
+     public function search()
+    {
+        //show single blog post by id
+        if (empty($_GET['query'])){
+            $this->index();
+        } else {
+            $blogModel = $this->model("SearchModel");
+            $data['S_post'] = $blogModel->getPosttext(strtoupper($_GET['query']));
+            if (count($data['S_post']) < 1) {
+                $data['error'] = ['er'=>'NOT FOUND'];
+                $this->view("search", $data);
+            } else {
+                $data['error'] = ['er'=>''];
+                $this->view("search", $data);
+            }
+            
+
+       
+         
+        }
+        
+    }
 
 }

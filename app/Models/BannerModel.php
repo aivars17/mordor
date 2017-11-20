@@ -1,6 +1,6 @@
 <?php
 
-class BlogModel
+class BannerModel
 {
 
     private $db;
@@ -11,15 +11,15 @@ class BlogModel
     }
 
     // Get single post ( [0]'st element from results array)
-    public function getOne(string $id): array
+    public function getOne(string $count): array
     {
-        return $this->db->select("SELECT * FROM posts WHERE id = :id", ["id" => $id])[0];
+        return $this->db->select("SELECT *, rand() as rand FROM banner ORDER By rand LIMIT $count");
     }
 
     // Get all posts
     public function getAll(): array
     {
-        return $this->db->select("SELECT *, SUBSTRING(`body`, 1, 100) as readmore FROM posts");
+        return $this->db->select("SELECT * FROM banner");
     }
 
 }

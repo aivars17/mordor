@@ -33,6 +33,8 @@
 
 <div class="row">
     <div class="col blog">Blog</div>
+</div><div class="row">
+    <div class="col blog"><?= $data['error']['er']?></div>
 </div>
 
 </div>
@@ -40,19 +42,20 @@
 <!-- Photo Grid -->
 
   <div class="container">
-        <?php 
+    <div class='row'>
+        <?php foreach ($data['S_post'] as $search) {
             echo 
-             "<div class='row'>
-            <div class='col content'>
-                <h2>".$data['post']['title']."</h2></a>
-                 <h2>".$data['post']['date']."</h2>
+             
+            "<div class='col-5 content'>
+                <a href='/".CONFIG['site_path']."/Blog/show/".$search['id']."'><h2>".$search['title']."</h2></a>
+                 <h6>".$search['date']."</h6>
                 <hr>
-                ".$data['post']['body']." 
-            </div>
-        </div>";
+                ".$search['readmore']."<a class='readmore' href='/".CONFIG['site_path']."/Blog/show/".$search['id']."'> Read more...</a>
+            </div>";
         
-        
+        }
        ?>
+   </div>
     </div>
 <div class="container-fluid"> 
 <!-- Footer -->

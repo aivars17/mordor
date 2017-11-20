@@ -34,3 +34,48 @@ h2 {
     color: #2c4251;
     padding: 20px;
 }
+body,h1 {font-family: "Raleway", Arial, sans-serif; background: #b7deed;
+background: -moz-linear-gradient(-45deg, #b7deed 0%, #71ceef 50%, #21b4e2 51%, #b7deed 100%);
+background: -webkit-linear-gradient(-45deg, #b7deed 0%,#71ceef 50%,#21b4e2 51%,#b7deed 100%);
+background: linear-gradient(135deg, #b7deed 0%,#71ceef 50%,#21b4e2 51%,#b7deed 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#b7deed',GradientType=1 );}
+h1 {letter-spacing: 6px}
+
+.content {
+    background: #f6f8f9;
+    background: -moz-linear-gradient(top, #f6f8f9 0%, #e5ebee 64%, #d7dee3 73%, #f6f8f9 96%, #f5f7f9 100%);
+    background: -webkit-linear-gradient(top, #f6f8f9 0%,#e5ebee 64%,#d7dee3 73%,#f6f8f9 96%,#f5f7f9 100%);
+    background: linear-gradient(to bottom, #f6f8f9 0%,#e5ebee 64%,#d7dee3 73%,#f6f8f9 96%,#f5f7f9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#f5f7f9',GradientType=0 );
+    margin: 5px;
+    border-radius: 5px;
+}
+.w3-button:hover{
+    text-decoration: none;
+}
+.blog {
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Vollkorn SC', serif;
+    padding: 20px;
+}
+footer{
+    position: relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+}
+h2 {
+    text-align: center;
+}
+.readmore {
+    font-weight: bold;
+}
+.banner {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+footer {
+    margin-top: 10px;
+}
