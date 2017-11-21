@@ -5,11 +5,35 @@ use uFrame\Controller;
 class Blog extends Controller
 {
 
-    public function index()
+    public function index($lim = 5, $page = 1)
     {
-        //show all blog records
+
+        
         $blogModel = $this->model('BlogModel');
-        $data['postList'] = $blogModel->getAll();
+
+        //counted posts
+        $data['navi'] = $blogModel->getAll();
+        $data['pages'] = ceil($data['navi'][0]['navi'] / $lim);
+       if($page == 1){
+        $data['back'] = 1;
+        $data['forward'] = 2;
+       } else{
+        $data['back'] = ($page - 1);
+        if ($page == $data['pages']) {
+            $data['forward'] = $page;
+        }else {
+            $data['forward'] = ($page + 1);
+        }
+       }
+        //show all blog records
+       if ($page == 1) {
+           $pages = $page * $lim - $lim;
+       }else {
+        $pages = $page * $lim -$lim;
+       }
+       $data['lim'] = $lim;
+        $data['post'] = ['title' => 'Blog'];
+        $data['postList'] = $blogModel->getposts($lim,$pages);
         $this->view("blog/list", $data);
     }
 
@@ -25,7 +49,7 @@ class Blog extends Controller
     }
      public function search()
     {
-        //show single blog post by id
+       
         if (empty($_GET['query'])){
             $this->index();
         } else {
