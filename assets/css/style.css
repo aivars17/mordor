@@ -3,12 +3,7 @@
 html { min-height: 100%; }
 
 body {
-
-    background: rgb(44,66,81);
-    background: -moz-linear-gradient(left,  rgba(44,66,81,1) 0%, rgba(27,154,170,1) 100%);
-    background: -webkit-linear-gradient(left,  rgba(44,66,81,1) 0%,rgba(27,154,170,1) 100%);
-    background: linear-gradient(to right,  rgba(44,66,81,1) 0%,rgba(27,154,170,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c4251', endColorstr='#1b9aaa',GradientType=1 );
+    background-color: #9DC3C2;
 }
 
 h1 {
@@ -26,24 +21,15 @@ h1 {
 h2 {
     margin: 10px 0 20px 0;
 }
+.post_w {
 
+}
 .content {
-    margin: 20px 5px;
-    border-top: 10px solid #c1c1c1;
-    background: #f6f8f9;
-    background: -moz-linear-gradient(top, #f6f8f9 0%, #e5ebee 64%, #d7dee3 73%, #f6f8f9 96%, #f5f7f9 100%);
-    background: -webkit-linear-gradient(top, #f6f8f9 0%,#e5ebee 64%,#d7dee3 73%,#f6f8f9 96%,#f5f7f9 100%);
-    background: linear-gradient(to bottom, #f6f8f9 0%,#e5ebee 64%,#d7dee3 73%,#f6f8f9 96%,#f5f7f9 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#f5f7f9',GradientType=0 );
-    border-radius: 5px;
+    background: #D0EFB1;
     color: #2c4251;
     padding: 20px;
 }
-body,h1 {font-family: "Raleway", Arial, sans-serif; background: #b7deed;
-background: -moz-linear-gradient(-45deg, #b7deed 0%, #71ceef 50%, #21b4e2 51%, #b7deed 100%);
-background: -webkit-linear-gradient(-45deg, #b7deed 0%,#71ceef 50%,#21b4e2 51%,#b7deed 100%);
-background: linear-gradient(135deg, #b7deed 0%,#71ceef 50%,#21b4e2 51%,#b7deed 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#b7deed',GradientType=1 );}
+body,h1 {font-family: "Raleway", Arial, sans-serif; }
 h1 {letter-spacing: 6px}
 
 .w3-button:hover{
@@ -60,6 +46,7 @@ footer{
    left: 0;
    bottom: 0;
    width: 100%;
+   margin-top: 10px;
 }
 h2 {
     text-align: center;
@@ -72,6 +59,16 @@ h2 {
     border-radius: 5px;
     margin-bottom: 5px;
 }
-footer {
-    margin-top: 10px;
+.navbar {
+    position: static;
+}
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
 }

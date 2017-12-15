@@ -6,33 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="/<?= CONFIG['site_path']; ?>/assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="/<?= CONFIG['site_path']; ?>/assets/css/style.css">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Vollkorn+SC" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <style>
-  .pagination {
-    display: inline-block;
-}
-
-.pagination a {
-    color: black;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-}
-</style>
 </head>
 <body>
   <div class="container-fluid">
-    <!-- !PAGE CONTENT! -->
+    <!-- Navibar -->
 
-
-    <nav class=" navbar-expand-lg navbar navbar-dark bg-dark">
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <nav class="row navbar-expand-lg navbar navbar-dark bg-dark">
+      <div class="col collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <?php uFrame\Menu::top(); ?>
         </ul>
@@ -53,26 +39,25 @@
       </div>
     </nav>
 
+    <!-- Header -->
     <div class="row">
       <div class="col blog">Blog</div>
     </div>
 
   </div>
-
-  <!-- Photo Grid -->
-
-  <div class="container">
-    <div class='row '>
+  <!-- Posts -->
+  <div class="container-fluid">
+    <div class='row'>
           <?php foreach ($data['postList'] as $post) {
-        echo 
-
-        "<div class='col-6'>
+        echo
+        "<div class='post_w col-12' style='background-color: #B3D89C;'>
           <div class='row'>
-            <div class='col content'
+          <div class='col-2'><h6>".$post['date']."</h6></div>
+            <div class='col-10 content'>
               <a href='/".CONFIG['site_path']."/blog/show/".$post['id']."'><h2>".$post['title']."</h2></a>
-              <h6>".$post['date']."</h6>
+              
               <hr>
-              ".$post['readmore']."<a class='readmore'; href='Blog/show/".$post['id']."'> Read more...</a>
+              ".$post['readmore']."<a class='readmore'; href='/".CONFIG['site_path']."/blog/show/".$post['id']."'> Read more...</a>
             </div>
           </div>    
         </div>";
@@ -97,6 +82,7 @@
   </div>
   <div class="container-fluid"> 
     <!-- Footer -->
+    <div class="row">
     <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large"> 
       <i class="fa fa-facebook-official w3-hover-opacity"></i>
       <i class="fa fa-instagram w3-hover-opacity"></i>
@@ -104,8 +90,9 @@
       <i class="fa fa-pinterest-p w3-hover-opacity"></i>
       <i class="fa fa-twitter w3-hover-opacity"></i>
       <i class="fa fa-linkedin w3-hover-opacity"></i>
-      <p>Powered by CA</p>
+      <p>Powered by Sevskis</p>
     </footer>
+  </div>
   </div>
   <script src="/<?= CONFIG['site_path']; ?>/assets/js/script.js"></script>
   <script src="/<?= CONFIG['site_path']; ?>/assets/js/blog.js"></script>

@@ -5,7 +5,7 @@ define("VERSION", 2017111216);
 define("CONFIG", [
 
     // Application
-    "site_path" => "studijos/mordor",
+    "site_path" => "mordor",
     "site_title" => "µFrame",
 
     // Database
